@@ -81,6 +81,15 @@ app.get('/products', (req, res) => {
     })
 })
 
+app.get('/welcom/:name', (req, res) => {
+    res.render('about', {
+        title: 'About Me',
+        name: req.query.name,
+        
+    })
+})
+
+
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
